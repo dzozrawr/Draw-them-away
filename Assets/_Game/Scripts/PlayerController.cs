@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float shootingPower = 5f;
 
     public GameObject arrow;
-    public Transform shootPoint;
 
     public Vector3 shootPointDefaultRot;
 
@@ -37,9 +36,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shootPointDefaultRot = shootPoint.localRotation.eulerAngles;
         defaultSpeed = pathFollower.speed;
-        transform.position = pathCreator.path.GetPointAtTime(0.9f);
+        transform.position = pathCreator.path.GetPointAtTime(0.95f);
         pathFollower.SetClosestDistanceAlongPath();
 
         shootingDefaultValue = shootingPower;
@@ -52,8 +50,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (gameController.IsGameOver()) return; 
-       if(isDefaultState&&!isBarricadeState)  DefaultState();
-       if(!isDefaultState && isBarricadeState) BarricadeState();
+    //   if(isDefaultState&&!isBarricadeState)  DefaultState();
+    //   if(!isDefaultState && isBarricadeState) BarricadeState();
         /*        
                 {
                     float newXVal = shootPoint.rotation.eulerAngles.x - aimingRotSpeed * Time.deltaTime;

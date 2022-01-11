@@ -13,6 +13,7 @@ TagManager:
   - Floor
   - CoinDestination
   - DoorClose
+  - Line
   layers:
   - Default
   - TransparentFX

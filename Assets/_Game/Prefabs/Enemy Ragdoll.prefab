@@ -921,6 +921,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730cd16fa81c5df458ac2cea5ee24902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToDie: 6
+  goToApplyDeathMat: {fileID: 8983551199775586687}
+  deathMat: {fileID: 2100000, guid: 691366f5517be8443afc92fae532b121, type: 2}
 --- !u!54 &4863392303303521279
 Rigidbody:
   m_ObjectHideFlags: 0

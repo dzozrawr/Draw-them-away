@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RagdollController : MonoBehaviour
 {
+    public float timeToDie = 6f;
+    public GameObject goToApplyDeathMat;
+    public Material deathMat;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +22,13 @@ public class RagdollController : MonoBehaviour
 
     public void Die()
     {
-        Destroy(transform.parent.gameObject,6f);
+        Destroy(transform.parent.gameObject, timeToDie);
         transform.parent.parent = null;
         GetComponent<Animator>().enabled = false;
         SetRigidBodyState(false);
         SetColliderState(true);
+
+        goToApplyDeathMat.GetComponent<Renderer>().material = deathMat; //change color to death color
     }
 
     public void SetRigidBodyState(bool state)

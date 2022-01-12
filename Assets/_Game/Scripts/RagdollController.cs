@@ -19,7 +19,7 @@ public class RagdollController : MonoBehaviour
 
     public void Die()
     {
-        Destroy(transform.parent.gameObject,3f);
+        Destroy(transform.parent.gameObject,6f);
         transform.parent.parent = null;
         GetComponent<Animator>().enabled = false;
         SetRigidBodyState(false);

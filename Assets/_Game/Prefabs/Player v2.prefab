@@ -686,15 +686,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4976345591746794, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4976345591746794, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4976345591746794, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.31
+      value: 7.26
       objectReference: {fileID: 0}
     - target: {fileID: 4976345591746794, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
       propertyPath: m_LocalRotation.w
@@ -727,6 +727,10 @@ PrefabInstance:
     - target: {fileID: 114567261027369356, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
       propertyPath: width
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567261027369356, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114567261027369356, guid: d62dc983142f1ab44a71462b84aac638, type: 3}
       propertyPath: drawStable

@@ -17,7 +17,7 @@ public class MarkScript : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+/*    private void OnCollisionEnter(Collision collision)
     {
        
         if (collision.collider.CompareTag("Line"))
@@ -37,5 +37,24 @@ public class MarkScript : MonoBehaviour
              
         }
 
+    }*/
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Line"))
+        {
+            //  Debug.Log(collision.gameObject.name);
+            //   Debug.Log("Mark collision");
+            //ragdollController.
+            if (ragdollController != null)
+            {
+                ragdollController.Die();
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(transform.parent.gameObject);
+            }
+        }
     }
 }

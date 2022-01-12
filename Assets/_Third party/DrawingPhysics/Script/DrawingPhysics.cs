@@ -62,8 +62,9 @@ public class DrawingPhysics : MonoBehaviour {
 		{
 			if (isDrawing==false)
 			{
-				//Get first point
-				initdrawPos=cameras.ScreenToWorldPoint (new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraFar));
+			//	cameraFar = Mathf.Abs(cameras.transform.position.z - transform.position.z); //I MODIFIED THIS CODE
+																						   //Get first point
+				initdrawPos =cameras.ScreenToWorldPoint (new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraFar));
 				//Create LineRenderer gameobject
 				brushDrawingClone = Instantiate(linePrefab, initdrawPos, cameras.transform.rotation) as GameObject;
 				lineRenderer = brushDrawingClone.GetComponent<LineRenderer>();
@@ -105,7 +106,8 @@ public class DrawingPhysics : MonoBehaviour {
 		//Set LineRenderer and create it's colliders
 		if (isDrawing && brushDrawingClone)
 		{
-			//Screen to WorldPoint
+		//	cameraFar = Mathf.Abs(cameras.transform.position.z - transform.position.z); //I MODIFIED THIS CODE
+																						//Screen to WorldPoint
 			drawPos = cameras.ScreenToWorldPoint (new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraFar));
 			//Calculate distance between this draw point and last
 			float drawdistance = Vector3.Distance(drawPos, lastdrawPos);
